@@ -63,17 +63,12 @@ const filter_reducer = (
     let { age, height } = state.filters;
     if (name === "age") {
       if (checked) {
-        // console.log('a box is just checked')
         age.push(value);
-        // console.log(age)
         value = age;
-        // console.log(value)
       }
       if (!checked) {
-        // console.log('a box is UNCHECKED')
         age = age.filter((ageValue) => ageValue !== value);
         value = age;
-        // console.log(value)
       }
     }
     if (name === "height") {
@@ -103,7 +98,6 @@ const filter_reducer = (
     // filter by searchTerm
     if (searchTerm) {
       tempProducts = tempProducts.filter((product) => {
-        // console.log(product)
         return (
           product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           product.itemDescription
@@ -126,25 +120,13 @@ const filter_reducer = (
     }
     // age
     if (ageFilters.length > 0) {
-      // console.log('there is something in the age array');
 
       tempProducts = tempProducts.filter((tempProduct) => {
         const { age: productAgeArray } = tempProduct;
-        // needs to return ONE true/ false value here
         return ageFilters
           .map((ageFilter) => productAgeArray?.includes(ageFilter))
           .every((value) => Boolean(value));
-
-        // see every step with following lines
-        // const boolArray = ageFilters.map(ageFilter => {
-        //   return productAgeArray?.includes(ageFilter)
-        // })
-        // console.log(boolArray)
-        // console.log(boolArray.every(value => Boolean(value)))
-
-        // return boolArray.every(value => Boolean(value))
       });
-      // console.log(tempProducts)
     }
     // height
     if (heightFilters.length > 0) {
