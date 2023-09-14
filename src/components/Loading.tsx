@@ -1,5 +1,3 @@
- 
-
 const Loading = () => {
   return (
     <div className="section section-center">

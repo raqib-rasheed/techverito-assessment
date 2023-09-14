@@ -1,5 +1,3 @@
- 
-
 import Loading from "components/Loading";
 import GridView from "./GridView";
 import ListView from "./ListView";

@@ -1,6 +1,6 @@
-import {  type ReactElement } from "react";
+import { type ReactElement } from "react";
 import { Navbar, Sidebar, Footer, ScrollToTop } from "./components";
-import AppRoutes from "components/Routes";
+import AppRoutes from "Routes";
 
 function App() {
   return (

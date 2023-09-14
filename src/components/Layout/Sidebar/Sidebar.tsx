@@ -1,8 +1,7 @@
- 
 import styled from "styled-components";
-import CartButtons from "../Layout/common/CartButtons";
-import { NavLinks } from "../Layout/Navbar/NavLinks";
-import { useProductsContext } from "../../context/products_context";
+import CartButtons from "../common/CartButtons";
+import { NavLinks } from "../Navbar/NavLinks";
+import { useProductsContext } from "../../../context/products_context";
 import { SidebarHeader } from "./SidebarHeader";
 
 const Sidebar = () => {

@@ -1,4 +1,3 @@
- 
 import { useFilterContext } from "../../context/filter_context";
 import { formatPrice } from "../../utils/helpers";
 

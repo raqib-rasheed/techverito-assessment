@@ -1,4 +1,3 @@
- 
 import { useFilterContext } from "../../context/filter_context";
 import { BsFillGridFill, BsList } from "react-icons/bs";
 

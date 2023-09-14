@@ -1,4 +1,3 @@
- 
 import { useFilterContext } from "../../context/filter_context";
 
 export const ClearFilters = () => {

@@ -1,4 +1,3 @@
- 
 import { Link } from "react-router-dom";
 import { links } from "../../../utils/constants";
 import { useProductsContext } from "../../../context/products_context";
@@ -18,7 +17,6 @@ export const NavLinks: React.FC<{ className: string; isSidebar?: boolean }> = ({
           </li>
         );
       })}
-      {/* 'checkout' only available in sidebar, not in Navbar */}
       {isSidebar && (
         <li>
           <Link to="/checkout" onClick={closeSidebar}>

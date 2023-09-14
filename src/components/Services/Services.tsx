@@ -16,7 +16,7 @@ const Services = () => {
 export default Services;
 
 const Wrapper = styled.section`
-  h3{
+  h3 {
     color: var(--clr-white);
   }
   h4 {
@@ -45,14 +45,14 @@ const Wrapper = styled.section`
     background: var(--clr-grey-10);
     padding: 2.5rem 2rem;
     border-radius: var(--radius);
-    
+
     p {
       color: var(--clr-primary-2);
     }
-    h4{
+    h4 {
       text-align: center;
     }
-    &-body{
+    &-body {
       display: flex;
       align-items: center;
       flex-direction: column;

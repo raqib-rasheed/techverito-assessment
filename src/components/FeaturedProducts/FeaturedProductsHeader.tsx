@@ -1,5 +1,3 @@
- 
-
 export const FeaturedProductsHeader = () => {
   return (
     <div className="title">

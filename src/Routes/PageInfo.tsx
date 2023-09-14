@@ -1,7 +1,7 @@
 import { Cart, Error, Home } from "pages";
-import SingleProduct  from "pages/SingleProductPage/SingleProductPage";
+import SingleProduct from "pages/SingleProductPage/SingleProductPage";
 import ProductsPage from "pages/ProductsPage";
-import {  ReactElement } from "react";
+import { ReactElement } from "react";
 
 export type AppPageName =
   | "HOME"
@@ -17,7 +17,6 @@ interface PageDeet {
   element: ReactElement;
   name: AppPageName;
 }
-
 
 export const AppPages: PageDeet[] = [
   {
