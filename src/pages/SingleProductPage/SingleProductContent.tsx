@@ -1,4 +1,3 @@
- 
 import { useProductsContext } from "../../context/products_context";
 import { formatPrice } from "../../utils/helpers";
 import { AddToCart } from "../../components";

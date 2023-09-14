@@ -8,7 +8,7 @@ export const ServicesCards = () => {
   const { updateFilters, handleClickFromServices, clearFilters } =
     useFilterContext();
 
-  const serviceBackgroundStyles:CSSProperties = {
+  const serviceBackgroundStyles: CSSProperties = {
     backgroundImage: `url(${ToysBg})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -16,13 +16,13 @@ export const ServicesCards = () => {
   };
 
   const actUponServiceItemAction = (
-    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
   ) => {
     clearFilters();
     handleClickFromServices();
     updateFilters(e);
   };
-  
+
   return (
     <div className="services-center">
       {services.map(({ id, icon, title }) => {

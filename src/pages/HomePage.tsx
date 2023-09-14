@@ -1,4 +1,3 @@
- 
 import { Hero, Services, Contact, FeaturedProducts } from "../components";
 
 const HomePage = () => {

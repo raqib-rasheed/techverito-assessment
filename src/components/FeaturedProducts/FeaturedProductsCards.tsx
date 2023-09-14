@@ -1,4 +1,3 @@
- 
 import Product from "../Product/Product";
 import { useProductsContext } from "../../context/products_context";
 

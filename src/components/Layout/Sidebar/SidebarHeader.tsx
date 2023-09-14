@@ -1,7 +1,7 @@
-import TechveritoLogo from "../../assets/techverito-logo.png";
+import TechveritoLogo from "../../../assets/techverito-logo.png";
 import { Link } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { useProductsContext } from "../../context/products_context";
+import { useProductsContext } from "../../../context/products_context";
 
 export const SidebarHeader = () => {
   const { closeSidebar } = useProductsContext();

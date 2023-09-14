@@ -1,4 +1,3 @@
- 
 import styled from "styled-components";
 import hero from "../assets/hero.jpg";
 import { Link } from "react-router-dom";
@@ -20,12 +19,8 @@ export default Hero;
 const HeroWords = () => {
   return (
     <>
-      <h1>
-      Dressing Dreams, Creating Memories.
-      </h1>
-      <p>
-      Discover the Enchanting World of Kids Fashion!
-      </p>
+      <h1>Dressing Dreams, Creating Memories.</h1>
+      <p>Discover the Enchanting World of Kids Fashion!</p>
     </>
   );
 };

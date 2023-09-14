@@ -1,4 +1,3 @@
- 
 import styled from "styled-components";
 // import Loading from './Loading'
 import { FeaturedProductsHeader } from "./FeaturedProductsHeader";

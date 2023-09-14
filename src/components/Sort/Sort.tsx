@@ -1,4 +1,3 @@
- 
 import { useFilterContext } from "../../context/filter_context";
 import styled from "styled-components";
 import { SortMenu } from "./SortMenu";

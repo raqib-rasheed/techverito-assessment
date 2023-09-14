@@ -3,4 +3,4 @@ import Home from "./HomePage";
 import SingleProduct from "./SingleProductPage/SingleProductPage";
 import Products from "./ProductsPage";
 import Cart from "./CartPage";
-export { Error, Home, SingleProduct, Products, Cart };
+export { Home, SingleProduct, Products, Cart, Error };

@@ -1,4 +1,3 @@
- 
 import styled from "styled-components";
 import { FcExpand, FcCollapse } from "react-icons/fc";
 

@@ -1,4 +1,3 @@
- 
 import { FaBars } from "react-icons/fa";
 import { useProductsContext } from "../../../context/products_context";
 
