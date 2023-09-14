@@ -1,21 +1,21 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const FormField: React.FC<{
-  label: string
-  type: string
-  name: string
-  placeholder: string
-  required?: boolean
+  label: string;
+  type: string;
+  name: string;
+  placeholder: string;
+  required?: boolean;
 }> = ({ label, type, name, placeholder, required }) => {
   return (
     <FormFieldContainer>
       <Label htmlFor={name}>{label}</Label>
       <Input name={name} type={type} placeholder={placeholder} required />
     </FormFieldContainer>
-  )
-}
+  );
+};
 
-export default FormField
+export default FormField;
 
 const FormFieldContainer = styled.div`
   display: -ms-flexbox;
@@ -28,7 +28,7 @@ const FormFieldContainer = styled.div`
   &:first-of-type {
     border-top: none;
   }
-`
+`;
 
 const Label = styled.label`
   width: 20%;
@@ -40,7 +40,7 @@ const Label = styled.label`
   text-overflow: ellipsis;
   white-space: nowrap;
   border-right: 1px solid var(--clr-primary-5);
-`
+`;
 
 const Input = styled.input`
   font-size: 16px;
@@ -68,4 +68,4 @@ const Input = styled.input`
       -webkit-text-fill-color: var(--clr-primary-5);
     }
   }
-`
+`;

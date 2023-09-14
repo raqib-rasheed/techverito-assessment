@@ -1,54 +1,55 @@
-import React from 'react'
-import styled from 'styled-components'
-import { formatPrice } from '../utils/helpers'
-import AmountButtons from './AmountButtons'
-import { FaTrash } from 'react-icons/fa'
-import { cartType, useCartContext } from '../context/cart_context'
-import { Link } from 'react-router-dom'
+ 
+import styled from "styled-components";
+import { FaTrash } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { cartType, useCartContext } from "context/cart_context";
+import { formatPrice } from "utils/helpers";
+import AmountButtons from "components/common/AmountButtons";
 
 const CartItem: React.FC<{ cartItem: cartType }> = ({ cartItem }) => {
-  const { id, image, name, price, amount, slug } = cartItem
+  const { id, image, name, price, amount, slug } = cartItem;
 
-  const { removeItem, toggleAmount } = useCartContext()
+  const { removeItem, toggleAmount } = useCartContext();
 
   const increase: () => void = () => {
-    toggleAmount(id, 'inc')
-  }
+    toggleAmount(id, "inc");
+  };
   const decrease: () => void = () => {
-    toggleAmount(id, 'dec')
-  }
+    toggleAmount(id, "dec");
+  };
 
   return (
     <Wrapper>
       {/* item column */}
-      <div className='title'>
+      <div className="title">
         <Link to={`/products/${slug}`}>
           <img src={image} alt={name} />
         </Link>
         <div>
-          <h5 className='name'>{name}</h5>
+          <h5 className="name">{name}</h5>
 
-
-          <h5 className='price-small'>{formatPrice(price)}</h5>
+          <h5 className="price-small">{formatPrice(price)}</h5>
         </div>
       </div>
       {/* price column */}
-      <div className='price'>{formatPrice(price)}</div>
+      <div className="price">{formatPrice(price)}</div>
       {/* quantity column */}
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
       {/* subtotal column */}
-      <h5 className='subtotal'>{formatPrice(price * amount)}</h5>
+      <h5 className="subtotal">{formatPrice(price * amount)}</h5>
       {/* remove icon */}
       <button
-        type='button'
-        className='remove-btn'
-        onClick={() => removeItem(id)}
+        type="button"
+        className="remove-btn"
+        onClick={() => {
+          removeItem(id);
+        }}
       >
         <FaTrash />
       </button>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.article`
   .subtotal {
@@ -184,6 +185,6 @@ const Wrapper = styled.article`
       }
     }
   }
-`
+`;
 
-export default CartItem
+export default CartItem;

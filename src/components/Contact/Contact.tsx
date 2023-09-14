@@ -1,24 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
-import { ContactContent } from './ContactContent'
-import { ContactForm } from './ContactForm'
-import { ContactHeader } from './ContactHeader'
+ 
+import styled from "styled-components";
+import { ContactContent } from "./ContactContent";
+import { ContactForm } from "./ContactForm";
+import { ContactHeader } from "./ContactHeader";
 
 const Contact = () => {
   return (
     <Wrapper>
-      <div className='section-center'>
+      <div className="section-center">
         <ContactHeader />
-        <div className='content'>
+        <div className="content">
           <ContactContent />
           <ContactForm />
         </div>
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
 
 const Wrapper = styled.section`
   padding: 5rem 0;
@@ -63,10 +63,10 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-white);
   }
   .submit-btn:hover {
-    color: var(--clr-white);
+    background: var(--clr-grey-5);
   }
   @media (min-width: 992px) {
     .content {
@@ -83,4 +83,4 @@ const Wrapper = styled.section`
   @media (min-width: 1280px) {
     padding: 15rem 0;
   }
-`
+`;

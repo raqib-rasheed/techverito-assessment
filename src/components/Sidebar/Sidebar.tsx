@@ -1,24 +1,24 @@
-import React from 'react'
-import styled from 'styled-components'
-import CartButtons from '../CartButtons'
-import { NavLinks } from '../Navbar/NavLinks'
-import { useProductsContext } from '../../context/products_context'
-import { SidebarHeader } from './SidebarHeader'
+ 
+import styled from "styled-components";
+import CartButtons from "../Layout/common/CartButtons";
+import { NavLinks } from "../Layout/Navbar/NavLinks";
+import { useProductsContext } from "../../context/products_context";
+import { SidebarHeader } from "./SidebarHeader";
 
 const Sidebar = () => {
-  const { isSidebarOpen } = useProductsContext()
+  const { isSidebarOpen } = useProductsContext();
   return (
     <SidebarContainer>
-      <aside className={isSidebarOpen ? 'sidebar show-sidebar' : 'sidebar'}>
+      <aside className={isSidebarOpen ? "sidebar show-sidebar" : "sidebar"}>
         <SidebarHeader />
-        <NavLinks className='links' isSidebar={true} />
+        <NavLinks className="links" isSidebar={true} />
         <CartButtons />
       </aside>
     </SidebarContainer>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
 
 const SidebarContainer = styled.div`
   text-align: center;
@@ -83,10 +83,13 @@ const SidebarContainer = styled.div`
   }
   .cart-btn-wrapper {
     margin: 2rem auto;
+    background-color: var(--clr-grey-10);
+    width: 100%;
+    padding: 1rem 0;
   }
   @media screen and (min-width: 992px) {
     .sidebar {
       display: none;
     }
   }
-`
+`;

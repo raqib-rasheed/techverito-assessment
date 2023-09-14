@@ -1,21 +1,25 @@
-import React from 'react'
-import styled from 'styled-components'
-import { FcExpand, FcCollapse } from 'react-icons/fc'
+ 
+import styled from "styled-components";
+import { FcExpand, FcCollapse } from "react-icons/fc";
 
 export const FiltersButton: React.FC<{
-  showFilters: boolean
-  setShowFilters: React.Dispatch<React.SetStateAction<boolean>>
+  showFilters: boolean;
+  setShowFilters: React.Dispatch<React.SetStateAction<boolean>>;
 }> = ({ showFilters, setShowFilters }) => {
   return (
     <Wrapper>
       <h3>filters</h3>
       <hr />
-      <button onClick={() => setShowFilters(!showFilters)}>
+      <button
+        onClick={() => {
+          setShowFilters(!showFilters);
+        }}
+      >
         {showFilters ? <FcCollapse /> : <FcExpand />}
       </button>
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -48,4 +52,4 @@ const Wrapper = styled.section`
   @media (min-width: 768px) {
     display: none;
   }
-`
+`;

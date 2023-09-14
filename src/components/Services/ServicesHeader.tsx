@@ -1,6 +1,6 @@
 export const ServicesHeader = () => {
   return (
-    <article className='header'>
+    <article className="header">
       <h3>
         high quality <br /> baby product
       </h3>
@@ -10,5 +10,5 @@ export const ServicesHeader = () => {
       </p>
       <p>We have the following types of products:</p>
     </article>
-  )
-}
+  );
+};

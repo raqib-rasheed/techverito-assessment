@@ -1,10 +1,10 @@
-import React from 'react'
-import { useFilterContext } from '../../context/filter_context'
-import styled from 'styled-components'
-import { SortMenu } from './SortMenu'
-import { SortButtons } from './SortButtons'
+ 
+import { useFilterContext } from "../../context/filter_context";
+import styled from "styled-components";
+import { SortMenu } from "./SortMenu";
+import { SortButtons } from "./SortButtons";
 const Sort = () => {
-  const { filteredProducts } = useFilterContext()
+  const { filteredProducts } = useFilterContext();
 
   return (
     <Wrapper>
@@ -13,10 +13,10 @@ const Sort = () => {
       <hr />
       <SortMenu />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Sort
+export default Sort;
 
 const Wrapper = styled.section`
   display: grid;
@@ -82,4 +82,4 @@ const Wrapper = styled.section`
   select {
     text-transform: capitalize;
   }
-`
+`;

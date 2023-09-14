@@ -1,4 +1,4 @@
-import React from 'react'
+ 
 
 export const ContactContent = () => {
   return (
@@ -6,5 +6,5 @@ export const ContactContent = () => {
       Stay informed for new product arrival and get discount by subscribing our
       newsletter.
     </p>
-  )
-}
+  );
+};

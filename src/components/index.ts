@@ -1,26 +1,21 @@
-import Navbar from './Navbar/Navbar'
-import Footer from './Footer'
-import Sidebar from './Sidebar/Sidebar'
-import PageHero from './PageHero'
-import Hero from './Hero'
-import Services from './Services/Services'
-import Contact from './Contact/Contact'
-import FeaturedProducts from './FeaturedProducts/FeaturedProducts'
-import Loading from './Loading'
-import ProductImages from './ProductImages'
-import AddToCart from './AddToCart'
-import AmountButtons from './AmountButtons'
-import Filters from './Filters/Filters'
-import ProductList from './ProductList'
-import Sort from './Sort/Sort'
-import CartContent from './CartContent'
-import StripeCheckout from './StripeCheckout'
-import ScrollToTop from './ScrollToTop'
+import Navbar from "./Layout/Navbar/Navbar";
+import Footer from "./Layout/Footer";
+import Sidebar from "./Sidebar/Sidebar";
+import PageHero from "./PageHero";
+import Hero from "./Hero";
+import Services from "./Services/Services";
+import Contact from "./Contact/Contact";
+import FeaturedProducts from "./FeaturedProducts/FeaturedProducts";
+import Loading from "./Loading";
+import AddToCart from "./common/AddToCart";
+import AmountButtons from "./common/AmountButtons";
+import Filters from "./Filters/Filters";
+import Sort from "./Sort/Sort";
+import ScrollToTop from "./Layout/ScrollToTop";
+import CartContent from './Cart/CartContent';
+import ProductList from './Product/ProductList';
+import ProductImages from './Product/ProductImages';
 
-
-// import CartButtons from './CartButtons'
-// import Error from './Error'
-// import Stars from './Stars'
 export {
   Navbar,
   Footer,
@@ -38,10 +33,5 @@ export {
   ProductList,
   Sort,
   CartContent,
-  StripeCheckout,
   ScrollToTop,
-
-  // CartButtons,
-  // Error,
-  // Stars,
-}
+};

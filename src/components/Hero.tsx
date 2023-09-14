@@ -1,53 +1,50 @@
-import React from 'react'
-import styled from 'styled-components'
-import hero from '../assets/hero.jpg'
-import { Link } from 'react-router-dom'
+ 
+import styled from "styled-components";
+import hero from "../assets/hero.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <Wrapper className='section-center'>
-      <article className='content'>
+    <Wrapper className="section-center">
+      <article className="content">
         <HeroWords />
         <ShopNowButton />
       </article>
       <HeroImage />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
 
 const HeroWords = () => {
   return (
     <>
       <h1>
-        high quality <br />
-        product for your little ones
+      Dressing Dreams, Creating Memories.
       </h1>
       <p>
-        Quality products imported from Japan, Europe and USA for baby boys and
-        girls, also for mummy.
+      Discover the Enchanting World of Kids Fashion!
       </p>
     </>
-  )
-}
+  );
+};
 
 const ShopNowButton = () => {
   return (
-    <Link to='/products' className='btn hero-btn'>
+    <Link to="/products" className="btn hero-btn">
       shop now
     </Link>
-  )
-}
+  );
+};
 
 const HeroImage = () => {
   return (
-    <article className='img-container'>
-      <img src={hero} alt='hero' className='main-img' />
-      {/* insert one more image here */}
+    <article className="img-container">
+      <img src={hero} alt="hero" className="main-img" />
     </article>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   min-height: 60vh;
@@ -99,14 +96,14 @@ const Wrapper = styled.section`
       border-radius: var(--radius);
     }
     .img-container::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 10%;
       height: 80%;
-      background: var(--clr-primary-9);
+      background: var(--clr-grey-9);
       bottom: 0%;
       left: -8%;
       border-radius: var(--radius);
     }
   }
-`
+`;

@@ -1,0 +1,25 @@
+{
+    "git.autofetch": true,
+    "gitlens.views.commits.files.layout": "list",
+    "gitlens.views.stashes.files.layout": "list",
+    "editor.minimap.scale": 3,
+    "editor.minimap.maxColumn": 35,
+    "editor.minimap.autohide": true,
+    "editor.minimap.renderCharacters": false,
+    "terminal.integrated.env.osx": {},
+    "explorer.compactFolders": false,
+    "workbench.iconTheme": "material-icon-theme",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typeChallenges.workspaceFolder": "/Users/raqib/.typeChallenges",
+    "workbench.sideBar.location": "right",
+    "gitlens.gitCommands.search.showResultsInSideBar": false,
+    "editor.minimap.enabled": false,
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.codeActionsOnSave": { "source.fixAll.eslint": true }, 
+    "editor.formatOnSave": true, 
+    "eslint.alwaysShowStatus": true, 
+    "files.autoSave": "onFocusChange"
+}

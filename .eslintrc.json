@@ -1,0 +1,20 @@
+{
+    "extends": [
+      "plugin:react/recommended",
+      "plugin:react/jsx-runtime",
+      "react-app",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react-hooks/recommended",
+      "prettier"
+    ],
+    "rules": {
+      "react/prop-types": "off",
+      "react/display-name": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/interactive-supports-focus": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/mouse-events-have-key-events": "off",
+      "jsx-a11y/no-static-element-interactions": "off"
+    }
+  }
+  

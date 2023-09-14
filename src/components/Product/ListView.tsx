@@ -1,16 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import { formatPrice } from '../utils/helpers'
-import { Link } from 'react-router-dom'
-import { productDataType } from '../utils/productData'
+ 
+import styled from "styled-components";
+import { formatPrice } from "../../utils/helpers";
+import { Link } from "react-router-dom";
+import { type productDataType } from "../../utils/productData";
 
 const ListView: React.FC<{ filteredProducts: productDataType[] }> = ({
   filteredProducts,
 }) => {
   return (
     <Wrapper>
-      {filteredProducts.map(product => {
-        const { slug, images, name, price, itemDescription } = product
+      {filteredProducts.map((product) => {
+        const { slug, images, name, price, itemDescription } = product;
         return (
           <article key={slug}>
             <Link to={`/products/${slug}`}>
@@ -21,16 +21,16 @@ const ListView: React.FC<{ filteredProducts: productDataType[] }> = ({
               <h4>{name}</h4>
               <h5>{formatPrice(price)}</h5>
               <p>{itemDescription.substring(0, 150)}...</p>
-              <Link to={`/products/${slug}`} className='btn'>
+              <Link to={`/products/${slug}`} className="btn">
                 Details
               </Link>
             </div>
           </article>
-        )
+        );
       })}
     </Wrapper>
-  )
-}
+  );
+};
 
 const Wrapper = styled.section`
   display: grid;
@@ -68,6 +68,6 @@ const Wrapper = styled.section`
       align-items: center;
     }
   }
-`
+`;
 
-export default ListView
+export default ListView;

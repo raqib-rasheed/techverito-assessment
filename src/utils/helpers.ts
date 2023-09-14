@@ -1,32 +1,32 @@
-import { productDataType, productDataTypeKey } from './productData'
+import { type productDataType, type productDataTypeKey } from "./productData";
 
 export const formatPrice = (number: number) => {
-  return Intl.NumberFormat('th-TH', {
-    style: 'currency',
-    currency: 'THB',
-  }).format(number)
-}
+  return Intl.NumberFormat("th-TH", {
+    style: "currency",
+    currency: "THB",
+  }).format(number);
+};
 
 export const getUniqueValues = (
   data: productDataType[],
   category: productDataTypeKey,
-  noAllValue?: boolean
+  noAllValue?: boolean,
 ) => {
-  let unique = data
-    .map(item => item[category])
+  const unique = data
+    .map((item) => item[category])
     .flat()
-    .filter(Boolean)
+    .filter(Boolean);
   if (noAllValue) {
-    return [...Array.from(new Set(unique))]
+    return [...Array.from(new Set(unique))];
   }
-  return ['all', ...Array.from(new Set(unique))]
-}
+  return ["all", ...Array.from(new Set(unique))];
+};
 
 export const sortUniqueCategoriesByFirstNumber: (
-  categoryArray: string[]
-) => string[] = categoryArray => {
-  const copiedArray = [...categoryArray]
+  categoryArray: string[],
+) => string[] = (categoryArray) => {
+  const copiedArray = [...categoryArray];
   return copiedArray.sort((a: string, b: string) => {
-    return Number(a.match(/\d+/)![0]) - Number(b.match(/\d+/)![0])
-  })
-}
+    return Number(a.match(/\d+/)![0]) - Number(b.match(/\d+/)![0]);
+  });
+};

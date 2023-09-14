@@ -1,24 +1,24 @@
-import React from 'react'
-import { useFilterContext } from '../../context/filter_context'
-import { formatPrice } from '../../utils/helpers'
+ 
+import { useFilterContext } from "../../context/filter_context";
+import { formatPrice } from "../../utils/helpers";
 
 export const PriceFilters = () => {
   const {
     updateFilters,
     filters: { minPrice, maxPrice, price },
-  } = useFilterContext()
+  } = useFilterContext();
   return (
-    <div className='form-control'>
+    <div className="form-control">
       <h5>price</h5>
-      <p className='price'>{formatPrice(price)}</p>
+      <p className="price">{formatPrice(price)}</p>
       <input
-        type='range'
-        name='price'
+        type="range"
+        name="price"
         onChange={updateFilters}
         min={minPrice}
         max={maxPrice}
         value={price}
       />
     </div>
-  )
-}
+  );
+};

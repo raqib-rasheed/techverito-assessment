@@ -1,28 +1,30 @@
-import styled from 'styled-components'
-import { ServicesCards } from './ServicesCards'
-import { ServicesHeader } from './ServicesHeader'
+import styled from "styled-components";
+import { ServicesCards } from "./ServicesCards";
+import { ServicesHeader } from "./ServicesHeader";
 
 const Services = () => {
   return (
     <Wrapper>
-      <div className='section-center'>
+      <div className="section-center">
         <ServicesHeader />
         <ServicesCards />
       </div>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
 
 const Wrapper = styled.section`
-  h3,
+  h3{
+    color: var(--clr-white);
+  }
   h4 {
-    color: var(--clr-primary-1);
+    color: var(--clr-grey-2);
   }
   padding: 5rem 0;
 
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-4);
 
   .header h3 {
     margin-bottom: 2rem;
@@ -30,7 +32,7 @@ const Wrapper = styled.section`
   p {
     margin-bottom: 0;
     line-height: 1.8;
-    color: var(--clr-primary-3);
+    color: var(--clr-white);
   }
   .services-center {
     margin-top: 4rem;
@@ -38,12 +40,22 @@ const Wrapper = styled.section`
     gap: 2.5rem;
   }
   .service {
-    background: var(--clr-primary-9);
-    text-align: center;
+    position: relative;
+    box-shadow: var(--dark-shadow);
+    background: var(--clr-grey-10);
     padding: 2.5rem 2rem;
     border-radius: var(--radius);
+    
     p {
       color: var(--clr-primary-2);
+    }
+    h4{
+      text-align: center;
+    }
+    &-body{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
   }
   span {
@@ -54,8 +66,8 @@ const Wrapper = styled.section`
     place-items: center;
     margin-bottom: 1rem;
     border-radius: 50%;
-    background: var(--clr-primary-10);
-    color: var(--clr-primary-1);
+    background: var(--clr-grey-4);
+    color: var(--clr-white);
     svg {
       font-size: 2rem;
     }
@@ -77,4 +89,4 @@ const Wrapper = styled.section`
       transform: translateY(5rem);
     }
   }
-`
+`;

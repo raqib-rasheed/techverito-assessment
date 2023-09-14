@@ -1,26 +1,28 @@
-import React from 'react'
-import styled from 'styled-components'
-import CartButtons from '../CartButtons'
-import { Logo } from './Logo'
-import { MenuIcon } from './MenuIcon'
-import { NavLinks } from './NavLinks'
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import CartButtons from "../common/CartButtons";
+import TechveritoLogo from "../../../assets/techverito-logo.png";
+import { MenuIcon } from "./MenuIcon";
+import { NavLinks } from "./NavLinks";
 
 const Nav = () => {
   return (
     <NavContainer>
-      <div className='nav-center'>
-        <div className='nav-header'>
-          <Logo />
+      <div className="nav-center">
+        <div className="nav-header">
+          <Link to="/">
+            <img src={TechveritoLogo} alt="cute buddy" />
+          </Link>
           <MenuIcon />
         </div>
-        <NavLinks className='nav-links' />
+        <NavLinks className="nav-links" />
       </div>
       <CartButtons />
     </NavContainer>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
 
 const NavContainer = styled.nav`
   height: 5rem;
@@ -58,9 +60,8 @@ const NavContainer = styled.nav`
     display: none;
   }
   @media (min-width: 992px) {
-    img{
+    img {
       margin-left: 15px;
-
     }
     .nav-toggle {
       display: none;
@@ -78,7 +79,7 @@ const NavContainer = styled.nav`
       }
       a {
         color: var(--clr-grey-3);
-        font-size: 1rem;
+        font-size: 1.25rem;
         text-transform: capitalize;
         letter-spacing: var(--spacing);
         padding: 0.5rem;
@@ -91,4 +92,4 @@ const NavContainer = styled.nav`
       display: grid;
     }
   }
-`
+`;

@@ -1,11 +1,11 @@
-import React from 'react'
-import { useFilterContext } from '../../context/filter_context'
+ 
+import { useFilterContext } from "../../context/filter_context";
 
 export const ClearFilters = () => {
-  const { clearFilters } = useFilterContext()
+  const { clearFilters } = useFilterContext();
   return (
-    <button type='button' className='clear-btn' onClick={clearFilters}>
+    <button type="button" className="clear-btn" onClick={clearFilters}>
       clear filters
     </button>
-  )
-}
+  );
+};

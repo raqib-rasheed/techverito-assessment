@@ -1,41 +1,43 @@
-import React from 'react'
-import { useFilterContext } from '../../context/filter_context'
-import { getUniqueValues } from '../../utils/helpers'
+ 
+import { useFilterContext } from "../../context/filter_context";
+import { getUniqueValues } from "../../utils/helpers";
 
 export const CategoryFilters = () => {
   const {
     updateFilters,
     allProducts,
     filters: { category },
-  } = useFilterContext()
-  const uniqueCategories = getUniqueValues(allProducts, 'categories')
+  } = useFilterContext();
+  const uniqueCategories = getUniqueValues(allProducts, "categories");
 
   return (
-    <div className='form-control'>
+    <div className="form-control">
       <h5>category</h5>
       <div>
         {uniqueCategories.map((uniqueCategory) => {
           // without this if statement, TS complains uniqueCategory is possibility undefined
-          if (typeof uniqueCategory === 'string') {
+          if (typeof uniqueCategory === "string") {
             return (
               <button
                 key={`${uniqueCategory}`}
-                type='button'
-                name='category'
+                type="button"
+                name="category"
                 className={
                   uniqueCategory.toLowerCase() === category
-                    ? 'active'
+                    ? "active"
                     : undefined
                 }
-                onClick={e => updateFilters(e)}
+                onClick={(e) => {
+                  updateFilters(e);
+                }}
               >
                 {uniqueCategory}
               </button>
-            )
+            );
           }
-          return null
+          return null;
         })}
       </div>
     </div>
-  )
-}
+  );
+};
