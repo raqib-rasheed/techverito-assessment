@@ -10,7 +10,7 @@ import {
 } from "../actions";
 
 import { type initialStateType } from "../context/products_context";
-import { type productDataType } from "../utils/productData";
+import { type ProductDataType } from "../utils/productData";
 
 const productsReducer = (state: initialStateType, action: any) => {
   if (action.type === SIDEBAR_OPEN) {
@@ -23,7 +23,7 @@ const productsReducer = (state: initialStateType, action: any) => {
     return { ...state, productsLoading: true };
   }
   if (action.type === GET_PRODUCTS_SUCCESS) {
-    // data retrieved from API doesn't fit productDataType shape
+    // data retrieved from API doesn't fit ProductDataType shape
     const allProducts = action.payload.map((product: any) => {
       let {
         _id: id,
@@ -77,7 +77,7 @@ const productsReducer = (state: initialStateType, action: any) => {
     });
 
     const featuredProducts = allProducts.filter(
-      (product: productDataType) => product.featured,
+      (product: ProductDataType) => product.featured,
     );
 
     return { ...state, productsLoading: false, allProducts, featuredProducts };
@@ -89,7 +89,7 @@ const productsReducer = (state: initialStateType, action: any) => {
     return { ...state, singleProductLoading: true };
   }
   if (action.type === GET_SINGLE_PRODUCT_SUCCESS) {
-    // check if it returns the correct productDataType object instead of an array
+    // check if it returns the correct ProductDataType object instead of an array
     return {
       ...state,
       singleProduct: action.payload,

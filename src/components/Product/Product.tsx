@@ -2,9 +2,9 @@ import styled from "styled-components";
 import { formatPrice } from "../../utils/helpers";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { type productDataType } from "../../utils/productData";
+import { type ProductDataType } from "../../utils/productData";
 
-const Product: React.FC<{ product: productDataType }> = ({ product }) => {
+const Product: React.FC<{ product: ProductDataType }> = ({ product }) => {
   const { images, name, price, slug } = product;
   const image = images[0];
   return (

@@ -1,4 +1,4 @@
-export interface productDataType {
+export interface ProductDataType {
   id: string;
   name: string;
   slug: string;
@@ -17,4 +17,4 @@ export interface productDataType {
   images: string[];
 }
 
-export type productDataTypeKey = keyof productDataType;
+export type ProductDataTypeKey = keyof ProductDataType;

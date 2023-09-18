@@ -1,4 +1,4 @@
-import { type productDataType, type productDataTypeKey } from "./productData";
+import { type ProductDataType, type ProductDataTypeKey } from "./productData";
 
 export const formatPrice = (number: number) => {
   return Intl.NumberFormat("th-TH", {
@@ -8,8 +8,8 @@ export const formatPrice = (number: number) => {
 };
 
 export const getUniqueValues = (
-  data: productDataType[],
-  category: productDataTypeKey,
+  data: ProductDataType[],
+  category: ProductDataTypeKey,
   noAllValue?: boolean,
 ) => {
   const unique = data

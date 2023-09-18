@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { formatPrice } from "../../utils/helpers";
 import { Link } from "react-router-dom";
-import { type productDataType } from "../../utils/productData";
+import { type ProductDataType } from "../../utils/productData";
 
-const ListView: React.FC<{ filteredProducts: productDataType[] }> = ({
+const ListView: React.FC<{ filteredProducts: ProductDataType[] }> = ({
   filteredProducts,
 }) => {
   return (

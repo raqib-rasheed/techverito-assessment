@@ -18,7 +18,7 @@ import {
   RESET_IS_CLICK_FROM_SERVICES,
 } from "../actions";
 import { useProductsContext } from "./products_context";
-import { type productDataType } from "../utils/productData";
+import { type ProductDataType } from "../utils/productData";
 
 interface filtersType {
   searchTerm: string;
@@ -43,8 +43,8 @@ export const defaultFilters: filtersType = {
 };
 
 export interface initialStateType {
-  filteredProducts: productDataType[];
-  allProducts: productDataType[];
+  filteredProducts: ProductDataType[];
+  allProducts: ProductDataType[];
   gridView: boolean;
   setGridView: () => void;
   setListView: () => void;

@@ -5,7 +5,7 @@ import React, {
   type ReactElement,
 } from "react";
 import reducer from "../reducers/cart_reducer";
-import { type productDataType } from "../utils/productData";
+import { type ProductDataType } from "../utils/productData";
 import {
   ADD_TO_CART,
   REMOVE_CART_ITEM,
@@ -31,7 +31,7 @@ export interface initialStateType {
     id: string | undefined,
     slug: string | undefined,
     amount: number,
-    singleProduct: productDataType | {},
+    singleProduct: ProductDataType | {},
   ) => void;
   removeItem: (id: string) => void;
   toggleAmount: (id: string, value: string) => void;
@@ -68,7 +68,7 @@ export const CartProvider: React.FC<{ children: ReactElement }> = ({
     id: string | undefined,
     slug: string | undefined,
     amount: number,
-    singleProduct: productDataType | {},
+    singleProduct: ProductDataType | {},
   ) => {
     dispatch({
       type: ADD_TO_CART,

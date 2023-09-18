@@ -16,15 +16,15 @@ import {
   GET_SINGLE_PRODUCT_ERROR,
 } from "../actions";
 // import { featuredProducts, productData } from '../utils/productData'
-import { type productDataType } from "../utils/productData";
+import { type ProductDataType } from "../utils/productData";
 import { API_ENDPOINT, QUERY } from "../utils/constants";
 import axios from "axios";
 
 export interface initialStateType {
   isSidebarOpen: boolean;
-  allProducts: productDataType[] | [];
-  featuredProducts: productDataType[] | [];
-  singleProduct: Partial<productDataType>;
+  allProducts: ProductDataType[] | [];
+  featuredProducts: ProductDataType[] | [];
+  singleProduct: ProductDataType;
   openSidebar: () => void;
   closeSidebar: () => void;
   fetchSingleProduct: (id: string) => void;
@@ -38,7 +38,20 @@ const initialState: initialStateType = {
   isSidebarOpen: false,
   allProducts: [],
   featuredProducts: [],
-  singleProduct: {},
+  singleProduct: {
+    id:"",
+    slug:"",
+    categories:"",
+    forWhom:"",
+    images:[""],
+    name:"",
+    price:0,
+    itemDescription:"",
+    brand:"",
+    stock:0,
+    ageDescription:"",
+    heightDescription:""
+  },
   openSidebar: () => {},
   closeSidebar: () => {},
   fetchSingleProduct: (id: string) => {},
@@ -65,8 +78,8 @@ export const ProductsProvider: React.FC<{ children: ReactElement }> = ({
   const fetchSingleProduct = (slug: string) => {
     dispatch({ type: GET_SINGLE_PRODUCT_BEGIN });
     try {
-      const singleProduct: productDataType = state.allProducts.filter(
-        (product: productDataType) => product.slug === slug,
+      const singleProduct: ProductDataType = state.allProducts.filter(
+        (product: ProductDataType) => product.slug === slug,
       )[0];
       // running filter() on empty allProducts [] will result in undefined
       // this if clause guard against such case

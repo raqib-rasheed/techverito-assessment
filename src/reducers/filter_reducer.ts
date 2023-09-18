@@ -11,7 +11,7 @@ import {
   RESET_IS_CLICK_FROM_SERVICES,
 } from "../actions";
 import { type initialStateType } from "../context/filter_context";
-import { type productDataType } from "../utils/productData";
+import { type ProductDataType } from "../utils/productData";
 
 const filter_reducer = (
   state: initialStateType,
@@ -19,7 +19,7 @@ const filter_reducer = (
 ) => {
   if (action.type === LOAD_PRODUCTS) {
     const maxPrice = Math.max(
-      ...action.payload.map((item: productDataType) => item.price),
+      ...action.payload.map((item: ProductDataType) => item.price),
     );
 
     return {
